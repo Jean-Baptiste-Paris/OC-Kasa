@@ -19,3 +19,14 @@ $site-padding-inline: 45px;
     height: 40px;
   }
 }
+
+@media screen and (max-width: 480px) {
+  .footer {
+    padding-bottom: 60px;
+
+    &__copyright {
+      padding-top: unset;
+      font-size: 12px;
+    }
+  }
+}

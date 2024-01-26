@@ -3,7 +3,7 @@ $color-dark: black;
 
 .header {
   padding-inline: var(--site-padding-inline, $site-padding-inline);
-  padding-top: var(--site-padding-top, $site-padding-inline);
+  padding-top: var(--site-padding-inline, $site-padding-inline);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -20,6 +20,35 @@ $color-dark: black;
 
       &--currentpage {
         text-decoration: underline;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  .header {
+    &__logo {
+      height: 55px;
+    }
+    .nav {
+      &__link {
+        font-size: 18px;
+        padding-left: 25px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .header {
+    &__logo {
+      height: 40px;
+    }
+    .nav {
+      &__link {
+        font-size: 12px;
+        padding-left: 15px;
+        text-transform: uppercase;
       }
     }
   }
