@@ -1,0 +1,21 @@
+$color-dark: black;
+$color-light: white;
+$site-padding-inline: 45px;
+
+.footer {
+  background-color: var(--color-dark, $color-dark);
+  padding-inline: var(--site-padding-inline, $site-padding-inline);
+  padding-top: 60px;
+  padding-bottom: 30px;
+  text-align: center;
+  color: var(--color-light, $color-light);
+
+  &__copyright {
+    padding-top: 30px;
+    font-size: 24px;
+  }
+
+  &__logo {
+    height: 40px;
+  }
+}

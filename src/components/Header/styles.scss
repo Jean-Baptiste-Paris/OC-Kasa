@@ -1,0 +1,26 @@
+$site-padding-inline: 45px;
+$color-dark: black;
+
+.header {
+  padding-inline: var(--site-padding-inline, $site-padding-inline);
+  padding-top: var(--site-padding-top, $site-padding-inline);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__logo {
+    height: 70px;
+  }
+
+  .nav {
+    &__link {
+      font-size: 24px;
+      padding-left: 35px;
+      color: var(--color-dark, $color-dark);
+
+      &--currentpage {
+        text-decoration: underline;
+      }
+    }
+  }
+}
