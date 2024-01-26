@@ -1,7 +1,9 @@
+import { Link } from 'react-router-dom'
+
 function Footer() {
   return (
     <footer>
-      <div>Kasa</div>
+      <Link to="/">Kasa</Link>
       <p>© 2020 Kasa. All rights reserved</p>
     </footer>
   )
