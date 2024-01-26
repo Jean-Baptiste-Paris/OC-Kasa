@@ -9,7 +9,7 @@ function KasaRouter() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
-      <Route path="/fiche/:logementID" element={<FicheLogement />} />
+      <Route path="/logement/:logementID" element={<FicheLogement />} />
       <Route path="*" element={<Error404 />} />
     </Routes>
   )
