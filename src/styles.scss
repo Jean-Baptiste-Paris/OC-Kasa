@@ -11,6 +11,15 @@
   --site-padding-inline: 45px;
 }
 
+@font-face {
+  font-family: "Montserrat";
+  src: url("./assets/fonts/Montserrat-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "Montserrat Italic";
+  src: url("./assets/fonts/Montserrat-Italic-VariableFont_wght.ttf");
+}
+
 /* prettier-ignore */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,

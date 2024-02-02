@@ -15,6 +15,7 @@ $color-dark: black;
   .nav {
     &__link {
       font-size: 24px;
+      font-weight: 500;
       padding-left: 35px;
       color: var(--color-dark, $color-dark);
 
