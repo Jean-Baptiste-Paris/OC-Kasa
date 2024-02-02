@@ -1,20 +1,47 @@
 .banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 220px;
   border-radius: 25px;
-  background-color: rgba(0, 0, 0, 0.5);
+  padding-inline: 30px;
+  background-color: rgba(0, 0, 0, 0.6);
   background-blend-mode: darken;
   background-position: center;
   background-size: cover;
   box-shadow: 0px 4px 4px 0px #00000040;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
   &__message {
     font-size: 48px;
     font-weight: 700;
+    line-height: 1.2;
     color: #ffffff;
-    text-align: center;
     text-shadow: 0px 4px 4px #00000040;
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  .banner {
+    height: 160px;
+    border-radius: 15px;
+    padding-inline: 20px;
+
+    &__message {
+      font-size: 36px;
+      line-height: 1.1;
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .banner {
+    height: 110px;
+    border-radius: 10px;
+    padding-inline: 15px;
+
+    &__message {
+      font-size: 24px;
+      line-height: 1;
+    }
   }
 }

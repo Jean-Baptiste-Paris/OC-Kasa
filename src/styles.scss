@@ -72,6 +72,12 @@ main {
   padding-block: 50px;
 }
 
+@media screen and (max-width: 770px) {
+  :root {
+    --site-padding-inline: 30px;
+  }
+}
+
 @media screen and (max-width: 480px) {
   :root {
     --site-padding-inline: 20px;

@@ -21,6 +21,15 @@ $site-padding-inline: 45px;
   }
 }
 
+@media screen and (max-width: 770px) {
+  .footer {
+    &__copyright {
+      padding-top: 15px;
+      font-size: 18px;
+    }
+  }
+}
+
 @media screen and (max-width: 480px) {
   .footer {
     padding-bottom: 60px;
