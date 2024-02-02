@@ -3,7 +3,7 @@ import "./styles.scss"
 
 function Grid({ logements }) {
   return (
-    <div className="gallery">
+    <div className="grid">
       {logements.map(({ id, title, cover }) => (
         <Thumbnail key={id} id={id} title={title} cover={cover} />
       ))}

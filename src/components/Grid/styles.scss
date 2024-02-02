@@ -1,15 +1,12 @@
-$column-number: 3;
-$grid-gap: 30px;
-
-.gallery {
+.grid {
   display: grid;
-  grid-template-columns: repeat($column-number, 1fr);
-  padding: $grid-gap;
-  gap: $grid-gap;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 30px;
+  gap: 30px;
   background-color: #f6f6f6;
   border-radius: 25px;
 
-  .gallery-item {
+  .thumbnail {
     display: flex;
     align-items: flex-end;
     aspect-ratio: 1/1;
@@ -33,13 +30,39 @@ $grid-gap: 30px;
       bottom: 0;
       left: 0;
       width: 100%;
-      height: 50%;
+      height: 100%;
       background: linear-gradient(
         to bottom,
         rgba(0, 0, 0, 0),
         var(--color-dark, black)
       );
       border-radius: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 770px) and (min-width: 480px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+    border-radius: 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: unset;
+    background-color: unset;
+
+    .thumbnail {
+      aspect-ratio: 4/3;
+
+      &::after {
+        height: 50%;
+      }
     }
   }
 }
