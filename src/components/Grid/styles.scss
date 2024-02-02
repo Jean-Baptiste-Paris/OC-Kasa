@@ -1,0 +1,45 @@
+$column-number: 3;
+$grid-gap: 30px;
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat($column-number, 1fr);
+  padding: $grid-gap;
+  gap: $grid-gap;
+  background-color: #f6f6f6;
+  border-radius: 25px;
+
+  .gallery-item {
+    display: flex;
+    align-items: flex-end;
+    aspect-ratio: 1/1;
+    background-color: var(--color-main, #ff6060);
+    border-radius: 10px;
+    padding: 20px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+    &__text {
+      color: var(--color-light);
+      font-weight: 700;
+      z-index: 1;
+    }
+
+    &::after {
+      content: "";
+      opacity: 0.6;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 50%;
+      background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0),
+        var(--color-dark, black)
+      );
+      border-radius: 10px;
+    }
+  }
+}

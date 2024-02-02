@@ -3,7 +3,7 @@ import bannerImage from "../../assets/images/banner-image-about.jpg"
 
 function About() {
   return (
-    <div>
+    <div className="About page">
       <Banner bannerImage={bannerImage} />
     </div>
   )

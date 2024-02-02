@@ -1,9 +1,10 @@
-$site-padding-inline: 45px;
-$color-dark: black;
+$padding-inline: var(--site-gap, 45px);
 
 .header {
-  padding-inline: var(--site-padding-inline, $site-padding-inline);
-  padding-top: var(--site-padding-inline, $site-padding-inline);
+  max-width: var(--site-width, 1240px);
+  margin: auto;
+  padding-inline: $padding-inline;
+  padding-top: $padding-inline;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -17,7 +18,7 @@ $color-dark: black;
       font-size: 24px;
       font-weight: 500;
       padding-left: 35px;
-      color: var(--color-dark, $color-dark);
+      color: var(--color-dark, black);
 
       &--currentpage {
         text-decoration: underline;
