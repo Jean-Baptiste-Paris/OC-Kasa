@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom"
-import logo from "../../assets/LOGO.svg"
+import logo from "../../assets/images/LOGO.svg"
 import "./styles.scss"
 
 function Header() {
