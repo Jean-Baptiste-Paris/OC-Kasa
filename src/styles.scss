@@ -74,20 +74,73 @@ main {
 .page {
   display: grid;
   gap: var(--site-gap);
+  justify-content: center;
 }
 
 .About .collapse {
   width: 80%;
 }
 
+.Error404 {
+  min-height: 60vh;
+  align-content: space-evenly;
+  text-align: center;
+  color: var(--color-main);
+  font-weight: 500;
+
+  &__404 {
+    font-weight: 700;
+    font-size: 280px;
+    line-height: 0.8;
+  }
+
+  &__title {
+    font-size: 36px;
+  }
+
+  &__link {
+    text-decoration: underline;
+    &:visited {
+      color: var(--color-dark);
+    }
+  }
+}
+
 @media screen and (max-width: 770px) {
   :root {
     --site-gap: 30px;
+  }
+
+  .Error404 {
+    &__404 {
+      font-size: 185px;
+    }
+    &__title {
+      font-size: 27px;
+    }
+
+    &__link {
+      font-size: 16px;
+    }
   }
 }
 
 @media screen and (max-width: 480px) {
   :root {
     --site-gap: 20px;
+  }
+
+  .Error404 {
+    &__404 {
+      font-size: 90px;
+    }
+
+    &__title {
+      font-size: inherit;
+    }
+
+    &__link {
+      font-size: 14px;
+    }
   }
 }
