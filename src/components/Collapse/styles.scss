@@ -1,0 +1,33 @@
+$border-radius: 5px;
+
+.collapse {
+  width: 100%;
+  border-radius: $border-radius;
+  background-color: var(--color-grey1, #f6f6f6);
+
+  &__title {
+    --collapse-font-size: 24px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-main, #ff6060);
+    color: var(--color-light, white);
+    width: 100%;
+    padding: 10px 20px 10px 15px;
+    border-radius: $border-radius;
+    border: none;
+    outline: none;
+    font-family: inherit;
+    font-size: var(--collapse-font-size);
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  &__content {
+    padding: 15px;
+    &--closed {
+      display: none;
+    }
+  }
+}
