@@ -76,6 +76,10 @@ main {
   gap: var(--site-gap);
 }
 
+.About .collapse {
+  width: 80%;
+}
+
 @media screen and (max-width: 770px) {
   :root {
     --site-gap: 30px;
