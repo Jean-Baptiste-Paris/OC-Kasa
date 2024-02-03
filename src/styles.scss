@@ -74,7 +74,6 @@ main {
 .page {
   display: grid;
   gap: var(--site-gap);
-  justify-content: center;
 }
 
 .About .collapse {
@@ -84,6 +83,7 @@ main {
 .Error404 {
   min-height: 60vh;
   align-content: space-evenly;
+  justify-content: center;
   text-align: center;
   color: var(--color-main);
   font-weight: 500;
@@ -109,6 +109,10 @@ main {
 @media screen and (max-width: 770px) {
   :root {
     --site-gap: 30px;
+  }
+
+  .About .collapse {
+    width: 100%;
   }
 
   .Error404 {
