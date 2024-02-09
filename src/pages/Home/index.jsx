@@ -7,7 +7,7 @@ function Home() {
   const bannerMessage = "Chez vous, partout\u00A0et\u00A0ailleurs"
   return (
     <div className="Home page">
-      <Banner bannerImage={bannerImage} bannerMessage={bannerMessage} />
+      <Banner image={bannerImage}>{bannerMessage}</Banner>
       <Grid logements={logements} />
     </div>
   )

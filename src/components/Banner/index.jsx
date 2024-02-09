@@ -1,13 +1,13 @@
 import React from "react"
 import "./styles.scss"
 
-function Banner({ bannerImage, bannerMessage }) {
-  const bannerStyle = bannerImage && {
-    backgroundImage: `url(${bannerImage})`,
+function Banner({ image, children }) {
+  const bannerStyle = image && {
+    backgroundImage: `url(${image})`,
   }
   return (
     <div className="banner" style={bannerStyle}>
-      {bannerMessage && <p className="banner__message">{bannerMessage}</p>}
+      <div className="banner__content">{children}</div>
     </div>
   )
 }

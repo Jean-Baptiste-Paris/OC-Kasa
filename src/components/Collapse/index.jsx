@@ -3,7 +3,7 @@ import "./styles.scss"
 import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons"
 import { useState } from "react"
 
-function Collapse({ CollapseTitle, collapseContent }) {
+function Collapse({ title, children }) {
   const [isOpen, toggleCollapse] = useState(false)
   return (
     <div className="collapse">
@@ -12,7 +12,7 @@ function Collapse({ CollapseTitle, collapseContent }) {
         className="collapse__title"
         onClick={() => toggleCollapse(!isOpen)}
       >
-        {CollapseTitle}
+        {title}
         <span>
           <FontAwesomeIcon
             icon={isOpen ? faChevronUp : faChevronDown}
@@ -26,7 +26,7 @@ function Collapse({ CollapseTitle, collapseContent }) {
           (isOpen ? "collapse__content--open" : "collapse__content--closed")
         }
       >
-        <p>{collapseContent}</p>
+        {children}
       </div>
     </div>
   )
