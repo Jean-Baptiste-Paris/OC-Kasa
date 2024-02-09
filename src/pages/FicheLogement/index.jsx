@@ -1,5 +1,6 @@
 import { Navigate, useParams } from "react-router-dom"
 import logements from "../../assets/data/logements.json"
+import InfoLogement from "../../components/InfoLogement"
 
 function FicheLogement() {
   const { logementID } = useParams()
@@ -9,8 +10,8 @@ function FicheLogement() {
     return <Navigate to="/404" replace={true} />
   }
   return (
-    <div className="Logement page">
-      <h1>{logement.title}</h1>
+    <div className="logement page">
+      <InfoLogement logement={logement} />
     </div>
   )
 }
