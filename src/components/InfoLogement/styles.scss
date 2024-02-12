@@ -1,14 +1,22 @@
-$rating-icon-default: var(--color-grey2, lightgrey);
-$rating-icon-active: var(--color-main, orange);
+$color-greyed: var(--color-grey2, lightgrey);
+$color-main: var(--color-main, orange);
+
+.info-logement {
+  &__title {
+    font-size: 2rem;
+    line-height: 1.2;
+    color: $color-main;
+  }
+}
 
 .rating {
   display: flex;
   gap: 10px;
   &__icon {
-    color: $rating-icon-default;
+    color: $color-greyed;
 
     &--active {
-      color: $rating-icon-active;
+      color: $color-main;
     }
   }
 }

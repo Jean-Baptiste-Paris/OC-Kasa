@@ -2,7 +2,6 @@ import { Navigate, useParams } from "react-router-dom"
 import logements from "../../assets/data/logements.json"
 import InfoLogement from "../../components/InfoLogement"
 import Collapse from "../../components/Collapse"
-import "./styles.scss"
 
 function FicheLogement() {
   const { id } = useParams()
