@@ -3,7 +3,6 @@ $border-radius: 5px;
 .collapse {
   width: 100%;
   border-radius: $border-radius;
-  background-color: var(--color-grey1, #f6f6f6);
   justify-self: center;
 
   &__title {
@@ -23,9 +22,15 @@ $border-radius: 5px;
     font-size: var(--collapse-font-size);
     font-weight: 700;
     cursor: pointer;
+
+    &--open {
+      border-bottom-left-radius: unset;
+      border-bottom-right-radius: unset;
+    }
   }
 
   &__content {
+    background-color: var(--color-grey1, #f6f6f6);
     padding: 15px;
     &--closed {
       display: none;

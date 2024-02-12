@@ -9,7 +9,10 @@ function Collapse({ title, children }) {
     <div className="collapse">
       <button
         type="button"
-        className="collapse__title"
+        className={
+          "collapse__title " +
+          (isOpen ? "collapse__title--open" : "collapse__title--closed")
+        }
         onClick={() => toggleCollapse(!isOpen)}
       >
         {title}
