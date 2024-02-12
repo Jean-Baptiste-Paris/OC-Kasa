@@ -1,20 +1,11 @@
-import Collapse from "../Collapse"
 import Host from "./Host"
 import Rating from "./Rating"
 import Tag from "./Tag"
 import "./styles.scss"
 
-function InfoLogement({
-  title,
-  location,
-  tags,
-  host,
-  rating,
-  description,
-  equipments,
-}) {
+function InfoLogement({ title, location, tags, host, rating, className }) {
   return (
-    <div className="info-logement">
+    <div className={`info-logement ${className}`}>
       <div>
         <h1 className="info-logement__title">
           {title ? title : "Fiche logement"}
@@ -30,18 +21,6 @@ function InfoLogement({
         <Host name={host.name} />
         <Rating rating={rating} />
       </div>
-      <Collapse title="Description">
-        {description ? description : "Pas de description disponible"}
-      </Collapse>
-      <Collapse title="Équipements">
-        <ul>
-          {equipments
-            ? equipments.map((equipement, index) => (
-                <li key={`${index}+${equipement}`}>{equipement}</li>
-              ))
-            : "Pas d'information sur les équipements disponibles"}
-        </ul>
-      </Collapse>
     </div>
   )
 }
