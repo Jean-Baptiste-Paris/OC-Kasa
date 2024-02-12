@@ -6,7 +6,7 @@ import "./styles.scss"
 function InfoLogement({ title, location, tags, host, rating, className }) {
   return (
     <div className={`info-logement ${className}`}>
-      <div>
+      <div className="info-logement__block block1">
         <h1 className="info-logement__title">
           {title ? title : "Fiche logement"}
         </h1>
@@ -17,7 +17,7 @@ function InfoLogement({ title, location, tags, host, rating, className }) {
           ))}
         </div>
       </div>
-      <div>
+      <div className="info-logement__block block2">
         <Host name={host.name} />
         <Rating rating={rating} />
       </div>

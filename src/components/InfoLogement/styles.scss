@@ -1,40 +1,66 @@
 $color-greyed: var(--color-grey2, lightgrey);
 $color-main: var(--color-main, orange);
 $color-light: var(--color-light, white);
-$gap: calc(var(--site-gap, 20px) - 5px);
+$block-gap: calc(var(--site-gap, 20px) - 5px);
+$rounded-sm: 10px;
 $rounded: 100rem;
 
 .info-logement {
+  &__block {
+    display: flex;
+    flex-direction: column;
+  }
+
   &__title {
     font-size: 2rem;
     line-height: 1.2;
     color: $color-main;
   }
 
-  &__location {
-  }
-
   &__tags {
     display: flex;
-    justify-content: stretch;
     gap: 10px;
-    padding-top: $gap;
+    padding-top: $block-gap;
     font-size: 14px;
     font-weight: 700;
     color: $color-light;
 
     .tag {
       background-color: $color-main;
-      border-radius: $rounded;
-      padding-inline: 5px;
-      width: 100%;
+      border-radius: $rounded-sm;
+      padding-inline: 15px;
+      min-width: 115px;
       text-align: center;
     }
   }
 
+  .host {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: $color-main;
+
+    &__name {
+      text-align: right;
+      padding-inline-end: 10px;
+    }
+
+    &__picture {
+      width: 64px;
+      aspect-ratio: 1/1;
+      border-radius: $rounded;
+      background-color: $color-greyed;
+    }
+  }
+
   .rating {
+    align-self: flex-end;
+    padding-top: $block-gap;
     display: flex;
     gap: 10px;
+    padding-bottom: 0.25rem;
+    font-size: 2rem;
+
     &__icon {
       color: $color-greyed;
 
