@@ -4,9 +4,15 @@ import Rating from "./Rating"
 import Tag from "./Tag"
 import "./styles.scss"
 
-function InfoLogement({ logement }) {
-  const { title, location, tags, host, rating, description, equipments } =
-    logement
+function InfoLogement({
+  title,
+  location,
+  tags,
+  host,
+  rating,
+  description,
+  equipments,
+}) {
   return (
     <div className="info-logement">
       <div>

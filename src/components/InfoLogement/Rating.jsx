@@ -10,7 +10,9 @@ function Rating({ rating }) {
         <FontAwesomeIcon
           key={rangeValue}
           icon={faStar}
-          className={rangeValue <= rating ? "rating__icon--active" : ""}
+          className={`rating__icon ${
+            rangeValue <= rating ? "rating__icon--active" : ""
+          }`}
         />
       ))}
     </div>

@@ -1,0 +1,20 @@
+$rating-icon-default: var(--color-grey2, lightgrey);
+$rating-icon-active: var(--color-main, orange);
+
+.info-logement {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--site-gap);
+}
+
+.rating {
+  display: flex;
+  gap: 10px;
+  &__icon {
+    color: $rating-icon-default;
+
+    &--active {
+      color: $rating-icon-active;
+    }
+  }
+}
