@@ -7,6 +7,7 @@ import "./styles.scss"
 function FicheLogement() {
   const { id } = useParams()
   const logement = logements.find((element) => element.id === id)
+  const { description, equipments } = logement
 
   if (!logement) {
     return <Navigate to="/404" replace={true} />
@@ -16,15 +17,13 @@ function FicheLogement() {
       <InfoLogement {...logement} className="logement__row" />
       <div className="logement__row">
         <Collapse title="Description">
-          {logement.description
-            ? logement.description
-            : "Pas de description disponible"}
+          {description ? description : "Pas de description disponible"}
         </Collapse>
         <Collapse title="Équipements">
           <ul>
-            {logement.equipments
-              ? logement.equipments.map((equipement, index) => (
-                  <li key={`${index}+${equipement}`}>{equipement}</li>
+            {equipments
+              ? equipments.map((equipment, index) => (
+                  <li key={`${index}+${equipment}`}>{equipment}</li>
                 ))
               : "Pas d'information sur les équipements disponibles"}
           </ul>
