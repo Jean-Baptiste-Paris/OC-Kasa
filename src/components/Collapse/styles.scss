@@ -32,8 +32,17 @@ $border-radius: 5px;
   &__content {
     background-color: var(--color-grey1, #f6f6f6);
     padding: 15px;
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 300ms, padding-block 300ms ease;
     &--closed {
-      display: none;
+      max-height: 0;
+      padding-block: 0;
+    }
+    &--open {
+      max-height: 500px;
     }
   }
 }
