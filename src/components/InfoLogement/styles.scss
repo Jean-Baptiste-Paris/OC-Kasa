@@ -1,5 +1,8 @@
 $color-greyed: var(--color-grey2, lightgrey);
 $color-main: var(--color-main, orange);
+$color-light: var(--color-light, white);
+$gap: calc(var(--site-gap, 20px) - 5px);
+$rounded: 100rem;
 
 .info-logement {
   &__title {
@@ -7,16 +10,37 @@ $color-main: var(--color-main, orange);
     line-height: 1.2;
     color: $color-main;
   }
-}
 
-.rating {
-  display: flex;
-  gap: 10px;
-  &__icon {
-    color: $color-greyed;
+  &__location {
+  }
 
-    &--active {
-      color: $color-main;
+  &__tags {
+    display: flex;
+    justify-content: stretch;
+    gap: 10px;
+    padding-top: $gap;
+    font-size: 14px;
+    font-weight: 700;
+    color: $color-light;
+
+    .tag {
+      background-color: $color-main;
+      border-radius: $rounded;
+      padding-inline: 5px;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  .rating {
+    display: flex;
+    gap: 10px;
+    &__icon {
+      color: $color-greyed;
+
+      &--active {
+        color: $color-main;
+      }
     }
   }
 }

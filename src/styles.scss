@@ -81,6 +81,8 @@ main {
 }
 
 .logement {
+  --site-gap: 25px;
+
   &__row {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
