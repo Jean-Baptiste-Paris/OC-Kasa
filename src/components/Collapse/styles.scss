@@ -23,9 +23,22 @@ $border-radius: 5px;
     font-weight: 700;
     cursor: pointer;
 
+    & .collapse__icon {
+      transform-origin: center;
+      transition: transform 400ms ease-in-out;
+    }
+
     &--open {
       border-bottom-left-radius: unset;
       border-bottom-right-radius: unset;
+
+      & .collapse__icon {
+        transform: rotate(0.5turn);
+      }
+    }
+
+    &--closed {
+      transition: all 500ms ease 500ms;
     }
   }
 
@@ -36,7 +49,7 @@ $border-radius: 5px;
     border-bottom-right-radius: $border-radius;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 300ms, padding-block 300ms ease;
+    transition: max-height 300ms ease-in-out, padding-block 600ms;
     &--closed {
       max-height: 0;
       padding-block: 0;

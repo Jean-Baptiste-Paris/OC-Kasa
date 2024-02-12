@@ -17,10 +17,7 @@ function Collapse({ title, children }) {
       >
         {title}
         <span>
-          <FontAwesomeIcon
-            icon={isOpen ? faChevronUp : faChevronDown}
-            className="collapse__title--icon"
-          />
+          <FontAwesomeIcon icon={faChevronUp} className="collapse__icon" />
         </span>
       </button>
       <div
