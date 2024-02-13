@@ -9,6 +9,7 @@
 
   --site-gap: 45px;
   --site-width: calc(1240px + var(--site-gap));
+  --site-font-size: 18px;
 }
 
 @font-face {
@@ -59,7 +60,7 @@ a {
 
 body {
   font-family: "Montserrat", sans-serif;
-  font-size: 18px;
+  font-size: var(--site-font-size);
   line-height: 1.6;
   color: var(--color-dark);
   background-color: var(--color-light);
@@ -80,7 +81,7 @@ main {
   width: 80%;
 }
 
-.logement {
+.Logement {
   --site-gap: 25px;
 
   &__infos {
@@ -131,6 +132,15 @@ main {
     width: 100%;
   }
 
+  .Logement {
+    &__infos {
+      grid-template-columns: 1fr;
+    }
+    &__collapses {
+      grid-template-columns: 1fr;
+    }
+  }
+
   .Error404 {
     &__404 {
       font-size: 185px;
@@ -138,7 +148,6 @@ main {
     &__title {
       font-size: 27px;
     }
-
     &__link {
       font-size: 16px;
     }
@@ -148,6 +157,11 @@ main {
 @media screen and (max-width: 480px) {
   :root {
     --site-gap: 20px;
+  }
+
+  .Logement {
+    --site-gap: 15px;
+    --site-font-size: 14px;
   }
 
   .Error404 {

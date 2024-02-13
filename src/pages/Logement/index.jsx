@@ -12,9 +12,9 @@ function FicheLogement() {
     return <Navigate to="/404" replace={true} />
   }
   return (
-    <div className="logement page">
-      <InfoLogement {...logement} className="logement__infos" />
-      <div className="logement__collapses">
+    <div className="Logement page">
+      <InfoLogement {...logement} className="Logement__infos" />
+      <div className="Logement__collapses">
         <Collapse title="Description">
           {description ? description : "Pas de description disponible"}
         </Collapse>

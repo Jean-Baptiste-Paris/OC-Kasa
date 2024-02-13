@@ -1,11 +1,12 @@
 $color-greyed: var(--color-grey2, lightgrey);
 $color-main: var(--color-main, orange);
 $color-light: var(--color-light, white);
-$block-gap: calc(var(--site-gap, 20px) - 5px);
 $rounded-sm: 10px;
 $rounded: 100rem;
 
 .info-logement {
+  --block-gap: calc(var(--site-gap, 20px) - 5px);
+
   &__block {
     display: flex;
     flex-direction: column;
@@ -13,7 +14,7 @@ $rounded: 100rem;
   }
 
   &__title {
-    font-size: 2rem;
+    font-size: 36px;
     line-height: 1.2;
     color: $color-main;
   }
@@ -21,10 +22,11 @@ $rounded: 100rem;
   &__tags {
     display: flex;
     gap: 10px;
-    padding-top: $block-gap;
+    padding-top: var(--block-gap);
     font-size: 14px;
     font-weight: 700;
     color: $color-light;
+    flex-wrap: wrap;
 
     .tag {
       background-color: $color-main;
@@ -56,11 +58,11 @@ $rounded: 100rem;
 
   .rating {
     align-self: flex-end;
-    padding-top: $block-gap;
+    padding-top: var(--block-gap);
     display: flex;
     gap: 10px;
     padding-bottom: 0.25rem;
-    font-size: 2rem;
+    font-size: 30px;
 
     &__icon {
       color: $color-greyed;
@@ -68,6 +70,56 @@ $rounded: 100rem;
       &--active {
         color: $color-main;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .info-logement {
+    &__title {
+      font-size: 27px;
+    }
+
+    &__block.block2 {
+      flex-direction: unset;
+    }
+
+    .host {
+      order: 1;
+    }
+
+    .rating {
+      font-size: 25px;
+      padding: unset;
+      align-self: center;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .info-logement {
+    &__title {
+      font-size: 18px;
+    }
+
+    &__location {
+      font-size: 14px;
+    }
+
+    &__tags {
+      font-size: 10px;
+    }
+
+    .host {
+      font-size: 14px;
+
+      &__picture {
+        width: 32px;
+      }
+    }
+
+    .rating {
+      font-size: 15px;
     }
   }
 }
