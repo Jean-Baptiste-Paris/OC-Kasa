@@ -83,7 +83,13 @@ main {
 .logement {
   --site-gap: 25px;
 
-  &__row {
+  &__infos {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--site-gap);
+  }
+
+  &__collapses {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: var(--site-gap);

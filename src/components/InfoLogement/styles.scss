@@ -9,6 +9,7 @@ $rounded: 100rem;
   &__block {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
   }
 
   &__title {

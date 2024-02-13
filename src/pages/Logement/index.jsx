@@ -13,8 +13,8 @@ function FicheLogement() {
   }
   return (
     <div className="logement page">
-      <InfoLogement {...logement} className="logement__row" />
-      <div className="logement__row">
+      <InfoLogement {...logement} className="logement__infos" />
+      <div className="logement__collapses">
         <Collapse title="Description">
           {description ? description : "Pas de description disponible"}
         </Collapse>
