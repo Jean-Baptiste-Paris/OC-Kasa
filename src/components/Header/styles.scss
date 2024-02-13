@@ -10,7 +10,7 @@ $padding-inline: var(--site-gap, 45px);
   align-items: center;
 
   &__logo {
-    height: 70px;
+    height: 50px;
   }
 
   .nav {
@@ -30,7 +30,7 @@ $padding-inline: var(--site-gap, 45px);
 @media only screen and (max-width: 770px) {
   .header {
     &__logo {
-      height: 55px;
+      height: 40px;
     }
     .nav {
       &__link {
@@ -44,7 +44,7 @@ $padding-inline: var(--site-gap, 45px);
 @media only screen and (max-width: 480px) {
   .header {
     &__logo {
-      height: 40px;
+      height: 30px;
     }
     .nav {
       &__link {
