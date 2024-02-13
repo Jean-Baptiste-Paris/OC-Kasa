@@ -1,6 +1,6 @@
 .slideshow {
   position: relative;
-  max-height: 400px;
+  aspect-ratio: 3/1;
 
   &__nav {
     position: absolute;
@@ -15,6 +15,10 @@
 
   &__arrow {
     font-size: 36px;
+  }
+
+  &__pagination {
+    align-self: flex-end;
   }
 
   &__image {
