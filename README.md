@@ -2,11 +2,11 @@
 
 ## Projet étudiant pour OpenClassrooms
 
-Projet n°6 du parcours Développeur Web
+Projet n°6 du parcours **Développeur Web**
 
-Sujet : Créez une application web de location immobilière avec React
+**Sujet** : Créez une application web de location immobilière avec React
 
-Contexte : Demarrage du projet React et développement de l’ensemble du front (pages, composants React, routes React Router) en suivant les maquettes Figma responsives
+**Contexte** : Demarrage du projet React et développement de l’ensemble du front (pages, composants React, routes React Router) en suivant les maquettes Figma responsives
 
 ## Compétences travaillées :
 
