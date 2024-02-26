@@ -1,0 +1,7 @@
+.logement {
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--site-gap);
+  }
+}

@@ -7,11 +7,11 @@ import Slideshow from "../../components/Slideshow"
 function FicheLogement() {
   const { id } = useParams()
   const logement = logements.find((element) => element.id === id)
-  const { description, equipments, pictures } = logement
 
   if (!logement) {
     return <Navigate to="/404" replace={true} />
   }
+  const { description, equipments, pictures } = logement
   return (
     <div className="Logement page">
       <Slideshow images={pictures} />
